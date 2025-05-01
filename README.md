@@ -4,7 +4,7 @@ mongoimport --db=bulgaria_ego --collection=places --file=features.json --jsonArr
 1/
 db.places.find({ "properties.amenity": "hospital", "geometry": { $near: { $geometry: { type: "Point", coordinates: [23.332956, 42.695833] } } } })
 2/
-db.places.find({ $or: [ { "properties.leisure": "park" }, { "properties.amenity": "park" } ], "geometry": { $near: { $geometry: { type: "Point", coordinates: [23.332956, 42.695833] }, $maxDistance: 3000 } } })
+db.places.find({ $or: [ { "properties.leisure": "bar" }, { "properties.amenity": "bar" } ], "geometry": { $near: { $geometry: { type: "Point", coordinates: [23.332956, 42.695833] }, $maxDistance: 3000 } } })
 3/
 db.places.find({ "geometry": { $geoWithin: { $geometry: { type: "Polygon", coordinates: [[[23.3180, 42.6740], [23.3420, 42.6740], [23.3420, 42.6880], [23.3180, 42.6880], [23.3180, 42.6740]]] } } } })
 4/
