@@ -1,3 +1,6 @@
+mongoimport --db=bulgaria_ego --collection=places --file=features.json --jsonArray
+
+
 1/
 db.places.find({ "properties.amenity": "hospital", "geometry": { $near: { $geometry: { type: "Point", coordinates: [23.332956, 42.695833] } } } })
 2/
